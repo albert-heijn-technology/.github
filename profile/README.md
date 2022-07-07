@@ -6,12 +6,10 @@ Here we host our open-sourced projects!
 AH Technology fulfills several important roles: making (online) shopping easier, providing customers with personalized advice and helping customers with the daily problems they encounter when shopping - such as lack of time to do the shopping or waiting at the checkout. That is why AH invests enormously in tech, data & digital. To make Albert Heijn the #1 food & tech retailer.
 
 ## How to reach us?
-Discord: https://discord.gg/5Hhbk6B2sA
-
+- [Discord chatroom](https://discord.gg/MUpMjP2) - Get support or discuss the various projects from AH Technology
 
 ## Community
 
-- [Discord chatroom](https://discord.gg/MUpMjP2) - Get support or discuss the various projects from AH Technology
 - [Contributing to AH Technology projects](https://github.com/albert-heijn-technology/.github/blob/main/CONTRIBUTING.md) - Start here if you want to contribute
 - [Code of Conduct](https://github.com/albert-heijn-technology/.github/blob/main/CODE_OF_CONDUCT.md) - The AH Technology Code of Conduct
 - [Blog](https://blog.ah.technology) - Announcements and updates
