@@ -3,9 +3,11 @@
 Here we host our open-sourced projects!
 
 ## Who are we?
+
 AH Technology fulfills several important roles: making (online) shopping easier, providing customers with personalized advice and helping customers with the daily problems they encounter when shopping - such as lack of time to do the shopping or waiting at the checkout. That is why AH invests enormously in tech, data & digital. To make Albert Heijn the #1 food & tech retailer.
 
 ## How to reach us?
+
 - [Discord chatroom](https://discord.gg/MUpMjP2) - Get support or discuss the various projects from AH Technology
 
 ## Community
@@ -16,6 +18,7 @@ AH Technology fulfills several important roles: making (online) shopping easier,
 - [Website](https://ah.technology) - Find more information about AH Technology and our open vacancies
 
 ## License
+
 All our projects have the following lincense:
 Copyright 2020-2022 © The Backstage Authors. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our Trademark Usage page: https://www.linuxfoundation.org/trademark-usage
 
