@@ -1,0 +1,12 @@
+{
+    "name": "CodeQL - Java",
+    "description": "Code scanning for Java starter workflow.",
+    "iconName": "ah-logo",
+    "categories": [
+        "Java"
+    ],
+    "filePatterns": [
+        "src/main/java",
+        "pom.xml$"
+    ]
+}

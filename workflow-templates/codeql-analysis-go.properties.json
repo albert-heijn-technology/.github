@@ -1,0 +1,13 @@
+{
+    "name": "CodeQL - Go",
+    "description": "Code scanning for Go starter workflow.",
+    "iconName": "ah-logo",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "go.mod$",
+        "go.sum$",
+        "main.go$"
+    ]
+}
