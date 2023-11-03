@@ -1,4 +1,4 @@
-![AH Technology logo](https://www.ah.nl/technology/assets/72587d43.png)
+<!-- ![AH Technology logo](../workflow-templates/ah-logo.svg) -->
 
 Here we host our open-sourced projects!
 
