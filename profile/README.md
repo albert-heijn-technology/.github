@@ -22,7 +22,7 @@ AH Technology fulfills several important roles: making (online) shopping easier,
 The default license for our projects is [Apache License, Version 2.0](../LICENSE):
 
 ```text
-Copyright 2020-2022 Albert Heijn Technology
+Copyright 2020 Albert Heijn Technology
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
