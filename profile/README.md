@@ -8,7 +8,7 @@ AH Technology fulfills several important roles: making (online) shopping easier,
 
 ## How to reach us?
 
-- [Discord chatroom](https://discord.gg/MUpMjP2) - Get support or discuss the various projects from AH Technology
+- [Discord chatroom](https://discord.com/invite/qkj62jt8Mg) - Get support or discuss the various projects from AH Technology
 
 ## Community
 

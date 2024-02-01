@@ -11,5 +11,5 @@ If the issue is closed or you are not sure your problem is the same, open a new 
 ## Discord
 
 Discord is a platform that hosts public and private communities.
-You can find developers and other users on [our Discord](https://discord.gg/MUpMjP2).
+You can find developers and other users on [our Discord](https://discord.com/invite/qkj62jt8Mg).
 It is a great way to ask quick questions or carry on a conversation.
