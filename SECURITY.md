@@ -8,7 +8,7 @@ If you have found a weak spot in one of our systems, we would like to hear about
 
 ## Ahold Delhaize kindly asks you
 
-* to e-mail your findings to ad.itsecurity.group@aholddelhaize.com
+* to share your findings via the [online form](https://www.aholddelhaize.com/responsible-disclosure-form/).
 * to provide sufficient information to reproduce the problem, so that Ahold Delhaize can address it as quickly as possible. The IP address or the URL of the system affected and a description of the findings are usually sufficient, but more may be needed for more complex findings.
 * to report your findings as quickly as possible after its discovery.
 * not to share any information on the findings with any other party than designated persons at Ahold Delhaize.
