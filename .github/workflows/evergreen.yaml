@@ -6,7 +6,7 @@ on:
     - cron: "3 2 1 * *"
 
 permissions:
-  issues: write
+  contents: read
 
 jobs:
   evergreen:
@@ -21,9 +21,11 @@ jobs:
           app-id: ${{ vars.OSPO_AUTOMATION_APP_ID }}
           private-key: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
       - name: Run evergreen action
-        uses: github/evergreen@v1
+        uses: github/evergreen@96a1999a9e18fbce9526ab7397e266e9b8a9c6ec  # 1.20.1
         env:
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          GH_APP_ID: ${{ vars.OSPO_AUTOMATION_APP_ID }}
+          GH_APP_INSTALLATION_ID: ${{ vars.OSPO_AUTOMATION_INSTALLATION_ID }}
+          GH_APP_PRIVATE_KEY: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
           ORGANIZATION: ${{ github.repository_owner }}
           COMMIT_MESSAGE: "chore: add Dependabot configuration"
           TITLE: "chore: add Dependabot configuration"
