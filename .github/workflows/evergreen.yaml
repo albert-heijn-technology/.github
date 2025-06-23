@@ -21,7 +21,7 @@ jobs:
           app-id: ${{ vars.OSPO_AUTOMATION_APP_ID }}
           private-key: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
       - name: Run evergreen action
-        uses: github/evergreen@b148df31787c128202fdfe28e2a0a7c5a7c35745  # 1.20.4
+        uses: github/evergreen@9e42bbdc77d68cc4f03ef7ad2e2c1980072a829c  # 1.20.5
         env:
           GH_APP_ID: ${{ vars.OSPO_AUTOMATION_APP_ID }}
           GH_APP_INSTALLATION_ID: ${{ vars.OSPO_AUTOMATION_INSTALLATION_ID }}
