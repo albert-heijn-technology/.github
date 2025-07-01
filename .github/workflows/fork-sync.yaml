@@ -1,0 +1,28 @@
+---
+name: Fork sync
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create GitHub App token
+        uses: actions/create-github-app-token@df432ceedc7162793a195dd1713ff69aefc7379e  # v2.0.6
+        id: token
+        with:
+          app-id: ${{ vars.OSPO_AUTOMATION_APP_ID }}
+          private-key: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
+          owner: ${{ github.repository_owner }}
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Sync forks
+        env:
+          GITHUB_TOKEN: ${{ steps.token.outputs.token }}
+          OWNER: ${{ github.repository_owner }}
+        run: >-
+          gh api "/orgs/${OWNER}/repos" --jq '.[] | select(.fork == true) | .full_name'
+          | xargs --verbose gh repo sync
