@@ -21,12 +21,13 @@ jobs:
           app-id: ${{ vars.OSPO_AUTOMATION_APP_ID }}
           private-key: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
       - name: Run evergreen action
-        uses: github/evergreen@ec01409b20933636d2abaca1a6814d5753808781  # 1.24.3
+        uses: github/evergreen@4469dee2f3c007933f1e8a2356ac15e03f7a832c  # 1.24.8
         env:
           GH_APP_ID: ${{ vars.OSPO_AUTOMATION_APP_ID }}
           GH_APP_INSTALLATION_ID: ${{ vars.OSPO_AUTOMATION_INSTALLATION_ID }}
           GH_APP_PRIVATE_KEY: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
           ORGANIZATION: ${{ github.repository_owner }}
+          SCHEDULE: monthly
           COMMIT_MESSAGE: "chore: add Dependabot configuration"
           TITLE: "chore: add Dependabot configuration"
           BODY: |
