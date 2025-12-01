@@ -27,6 +27,7 @@ jobs:
           GH_APP_INSTALLATION_ID: ${{ vars.OSPO_AUTOMATION_INSTALLATION_ID }}
           GH_APP_PRIVATE_KEY: ${{ secrets.OSPO_AUTOMATION_APP_KEY }}
           ORGANIZATION: ${{ github.repository_owner }}
+          SCHEDULE: monthly
           COMMIT_MESSAGE: "chore: add Dependabot configuration"
           TITLE: "chore: add Dependabot configuration"
           BODY: |
