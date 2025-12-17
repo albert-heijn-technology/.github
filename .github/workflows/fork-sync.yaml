@@ -25,4 +25,4 @@ jobs:
           OWNER: ${{ github.repository_owner }}
         run: >-
           gh api "/orgs/${OWNER}/repos" --jq '.[] | select(.fork == true) | .full_name'
-          | xargs --verbose gh repo sync
+          | xargs --verbose gh repo sync --branch main
