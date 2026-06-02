@@ -23,6 +23,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           OWNER: ${{ github.repository_owner }}
-        run: >-
-          gh api "/orgs/${OWNER}/repos" --jq '.[] | select(.fork == true) | .full_name'
-          | xargs --verbose gh repo sync --branch main
+        run: |
+          status=0
+          while read -r repo; do
+            echo "Syncing ${repo}"
+            if ! gh api -X POST "/repos/${repo}/merge-upstream" -f branch=main; then
+              echo "::error::Failed to sync ${repo}"
+              status=1
+            fi
+          done < <(gh api "/orgs/${OWNER}/repos" --paginate \
+            --jq '.[] | select(.fork == true) | .full_name')
+          exit "${status}"
