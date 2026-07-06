@@ -24,10 +24,30 @@ jobs:
           GITHUB_TOKEN: ${{ steps.token.outputs.token }}
           OWNER: ${{ github.repository_owner }}
         run: |
+          # merge-upstream returns 422 "Repository rule violations found" because that
+          # endpoint doesn't honor the org ruleset's bypass entry for this GitHub App,
+          # unlike a plain ref update. Replicate the fast-forward manually instead.
           status=0
           while read -r repo; do
             echo "Syncing ${repo}"
-            if ! gh api -X POST "/repos/${repo}/merge-upstream" -f branch=main; then
+            parent=$(gh api "/repos/${repo}" --jq '.parent.full_name')
+            branch=$(gh api "/repos/${repo}" --jq '.default_branch')
+            if [ -z "${parent}" ] || [ "${parent}" = "null" ]; then
+              echo "::error::${repo} has no upstream parent"
+              status=1
+              continue
+            fi
+            # Read the upstream tip via plain git (no API call) since the app's
+            # installation token has no access to external/upstream repos, even
+            # public ones.
+            upstream_sha=$(git ls-remote "https://github.com/${parent}.git" "refs/heads/${branch}" | cut -f1)
+            if [ -z "${upstream_sha}" ]; then
+              echo "::error::Could not resolve upstream SHA for ${repo}"
+              status=1
+              continue
+            fi
+            if ! gh api -X PATCH "/repos/${repo}/git/refs/heads/${branch}" \
+              -f sha="${upstream_sha}" -F force=false >/dev/null; then
               echo "::error::Failed to sync ${repo}"
               status=1
             fi
